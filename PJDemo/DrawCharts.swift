@@ -95,7 +95,7 @@ func drawMultiLineCharts(lineChartView:LineChartView,dataPoints:[String],values:
         lineChartDataSet.circleColors = [UIColor.blackColor()]
         lineChartDataSet.lineWidth = 5
         lineChartDataSet.circleColors = [chartColors[i]]
-        setChartLineData(lineChartDataSet, color: chartColors[i])
+        setChartLineData(lineChartDataSet, color: pieColors[i])
         dataSets.append(lineChartDataSet)
         
     }
@@ -122,7 +122,7 @@ func drawLineCharts(lineChartView:LineChartView,dataPoints : [String],values: [D
     let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
     lineChartView.data = lineChartData
     lineChartView.descriptionText = ""
-    lineChartView.animate(xAxisDuration: 2.0, easingOption: ChartEasingOption.Linear)
+    lineChartView.animate(xAxisDuration: 1.0, easingOption: ChartEasingOption.Linear)
     
 }
 
@@ -184,9 +184,10 @@ func drawBarCharts(barChartView:BarChartView,dataPoints : [String],values: [Doub
     
     let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "some")
     let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
-    barChartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
+    barChartDataSet.colors = ChartColorTemplates.vordiplom()
     barChartView.data = barChartData
     barChartView.descriptionText = " "
+    barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     
 }
 

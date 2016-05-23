@@ -13,9 +13,29 @@ class ConsumeViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var lineChartView: LineChartView!
     
-    @IBOutlet weak var totalSwitch: UISwitch!
-    @IBOutlet weak var pumpSwitch: UISwitch!
-    @IBOutlet weak var airConSwitch: UISwitch!
+    var dailyData = [Double](){
+        didSet{
+            
+        }
+    }
+    
+    var weeklyData = [Double](){
+        didSet{
+            //redraw()
+        }
+    }
+    var monthlyData = [Double](){
+        didSet{
+            //redraw()
+        }
+    }
+    
+    var yearlyData = [Double](){
+        didSet{
+            //redraw()
+        }
+    }
+    
     
     @IBOutlet weak var furnitureSwitch: UISwitch!
     
@@ -46,18 +66,15 @@ class ConsumeViewController: UIViewController, ChartViewDelegate {
         dateFormatter.dateFormat = "HH"
         
         switch sender.selectedSegmentIndex{
-        case 0: drawMultiLineCharts(lineChartView, dataPoints: daily, values: [unitsData_daily1,unitsData_daily2],labels:["总耗","空调"])
-                currentIndex = 0
+        case 0: drawLineCharts(lineChartView, dataPoints: daily, values: unitsData_daily1)
+         
         case 1:
-            drawMultiLineCharts(lineChartView, dataPoints: weekly, values: [unitsData_weekly], labels: ["总耗"])
-            
-            //drawLineCharts(lineChartView,dataPoints: monthly, values: unitsSold_monthly)
-                currentIndex = 1
+            drawLineCharts(lineChartView, dataPoints: weekly, values: unitsData_weekly)
             
         case 2 : setChart(monthly , values: unitsSold_monthly)
-            currentIndex = 2
+  
         case 3: setChart(yearly, values: unitsSold_yearly)
-                currentIndex = 3
+    
         default : break
             
             
@@ -126,16 +143,12 @@ class ConsumeViewController: UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lineChartView.delegate = self
-        
-        //lineChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
-       // self.lineChartView.xAxis.labelPosition = .Bottom
+ 
         self.lineChartView.leftAxis.labelPosition = .OutsideChart
-        //self.lineChartView.descriptionTextColor = UIColor.whiteColor()
-       // self.lineChartView.backgroundColor = UIColor.whiteColor()
-       // self.lineChartView.gridBackgroundColor = UIColor.whiteColor()
+
         self.lineChartView.descriptionText = ""
         
-        drawMultiLineCharts(lineChartView, dataPoints: daily, values: [unitsData_daily1,unitsData_daily2],labels:["总耗","空调"])
+        drawLineCharts(lineChartView, dataPoints: daily, values: unitsData_daily1)
         
 //        totalSwitch.addTarget(self, action: Selector("switchIsChanged:"), forControlEvents: UIControlEvents.ValueChanged)
 

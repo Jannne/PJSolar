@@ -36,6 +36,10 @@
 		94964BED1CCFA80E00E95DEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94964BEA1CCFA80E00E95DEB /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		94964BEE1CCFA80E00E95DEB /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94964BEB1CCFA80E00E95DEB /* ResetPasswordViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		94964BEF1CCFA80E00E95DEB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94964BEC1CCFA80E00E95DEB /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		94C3CE131CE181B70088BC7F /* FetchGenerateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3CE121CE181B70088BC7F /* FetchGenerateData.swift */; settings = {ASSET_TAGS = (); }; };
+		94C3CE171CE223B10088BC7F /* FetchConsumeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3CE161CE223B10088BC7F /* FetchConsumeData.swift */; settings = {ASSET_TAGS = (); }; };
+		94C3CE191CE2300E0088BC7F /* PolyFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3CE181CE2300E0088BC7F /* PolyFit.swift */; settings = {ASSET_TAGS = (); }; };
+		94C3CE1C1CE38D220088BC7F /* FetchWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3CE1B1CE38D220088BC7F /* FetchWeatherData.swift */; settings = {ASSET_TAGS = (); }; };
 		94F5E0661CB2364A00211152 /* CompositionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5E0651CB2364A00211152 /* CompositionTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		94F5E06C1CB24D7F00211152 /* DrawCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5E06B1CB24D7F00211152 /* DrawCharts.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -104,16 +108,16 @@
 		82875C5222022ABAE24092A4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		941151DC1CD0A92F007844E4 /* PredictStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictStateViewController.swift; sourceTree = "<group>"; };
 		941151E01CD102F2007844E4 /* ComparisonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparisonViewController.swift; sourceTree = "<group>"; };
-		9416E4DF1C47776B003EE611 /* PJDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PJDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9416E4DF1C47776B003EE611 /* SolarPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9416E4E21C47776B003EE611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9416E4E41C47776B003EE611 /* GrossViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossViewController.swift; sourceTree = "<group>"; };
 		9416E4EB1C47776B003EE611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9416E4EE1C47776B003EE611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9416E4F01C47776B003EE611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9416E4F51C47776B003EE611 /* PJDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PJDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9416E4F51C47776B003EE611 /* SolarPower.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolarPower.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9416E4F91C47776B003EE611 /* PJDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJDemoTests.swift; sourceTree = "<group>"; };
 		9416E4FB1C47776B003EE611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9416E5001C47776B003EE611 /* PJDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PJDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9416E5001C47776B003EE611 /* SolarPower.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolarPower.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9416E5041C47776B003EE611 /* PJDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJDemoUITests.swift; sourceTree = "<group>"; };
 		9416E5061C47776B003EE611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9416E5121C477C59003EE611 /* DeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,10 @@
 		94964BEA1CCFA80E00E95DEB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		94964BEB1CCFA80E00E95DEB /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		94964BEC1CCFA80E00E95DEB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		94C3CE121CE181B70088BC7F /* FetchGenerateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchGenerateData.swift; sourceTree = "<group>"; };
+		94C3CE161CE223B10088BC7F /* FetchConsumeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchConsumeData.swift; sourceTree = "<group>"; };
+		94C3CE181CE2300E0088BC7F /* PolyFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolyFit.swift; sourceTree = "<group>"; };
+		94C3CE1B1CE38D220088BC7F /* FetchWeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchWeatherData.swift; sourceTree = "<group>"; };
 		94F5E0651CB2364A00211152 /* CompositionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionTableViewController.swift; sourceTree = "<group>"; };
 		94F5E06B1CB24D7F00211152 /* DrawCharts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawCharts.swift; sourceTree = "<group>"; };
 		BA300C7BAC2539B6750B16EB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +188,7 @@
 		9416E4D61C47776B003EE611 = {
 			isa = PBXGroup;
 			children = (
-				9416E4E11C47776B003EE611 /* PJDemo */,
+				9416E4E11C47776B003EE611 /* SolarPower */,
 				9416E4F81C47776B003EE611 /* PJDemoTests */,
 				9416E5031C47776B003EE611 /* PJDemoUITests */,
 				9416E4E01C47776B003EE611 /* Products */,
@@ -193,26 +201,28 @@
 		9416E4E01C47776B003EE611 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9416E4DF1C47776B003EE611 /* PJDemo.app */,
-				9416E4F51C47776B003EE611 /* PJDemoTests.xctest */,
-				9416E5001C47776B003EE611 /* PJDemoUITests.xctest */,
+				9416E4DF1C47776B003EE611 /* SolarPower.app */,
+				9416E4F51C47776B003EE611 /* SolarPower.xctest */,
+				9416E5001C47776B003EE611 /* SolarPower.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9416E4E11C47776B003EE611 /* PJDemo */ = {
+		9416E4E11C47776B003EE611 /* SolarPower */ = {
 			isa = PBXGroup;
 			children = (
 				9416E4E21C47776B003EE611 /* AppDelegate.swift */,
 				94F5E0791CB252C600211152 /* Source */,
-				94F5E0771CB2523600211152 /* Login */,
-				94F5E0781CB2529300211152 /* ViewController */,
+				94F5E0771CB2523600211152 /* PersonInfo */,
+				947251BE1CDE093F0063126F /* Compare */,
+				94F5E0781CB2529300211152 /* DisplayData */,
 				9416E4EB1C47776B003EE611 /* Assets.xcassets */,
 				9416E4ED1C47776B003EE611 /* LaunchScreen.storyboard */,
 				9437B4F21CD0A14100D37694 /* Main.storyboard */,
 				9416E4F01C47776B003EE611 /* Info.plist */,
 				944139171C47CE2A002DF0D3 /* PJDemo-Bridging-Header.h */,
 			);
+			name = SolarPower;
 			path = PJDemo;
 			sourceTree = "<group>";
 		};
@@ -244,36 +254,75 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		94F5E0771CB2523600211152 /* Login */ = {
+		947251BE1CDE093F0063126F /* Compare */ = {
+			isa = PBXGroup;
+			children = (
+				941151E01CD102F2007844E4 /* ComparisonViewController.swift */,
+				941BC3871CD9B6D500945622 /* MasterViewController.swift */,
+				941BC3881CD9B6D500945622 /* DetailViewController.swift */,
+				941BC3891CD9B6D500945622 /* AddContactViewController.swift */,
+			);
+			name = Compare;
+			sourceTree = "<group>";
+		};
+		947251C01CDE0A850063126F /* Predict */ = {
+			isa = PBXGroup;
+			children = (
+				941151DC1CD0A92F007844E4 /* PredictStateViewController.swift */,
+				9446585E1CCC8CE200CE54E0 /* PredictViewController.swift */,
+			);
+			name = Predict;
+			sourceTree = "<group>";
+		};
+		947251C11CDE0AAD0063126F /* Consume */ = {
+			isa = PBXGroup;
+			children = (
+				94964BE51CCFA76200E95DEB /* ConsumeViewController.swift */,
+			);
+			name = Consume;
+			sourceTree = "<group>";
+		};
+		947251C21CDE0B1B0063126F /* Generate */ = {
+			isa = PBXGroup;
+			children = (
+				9437B4EC1CD04EC400D37694 /* GenerateViewController.swift */,
+				9437B4EE1CD08F2500D37694 /* ConVSGenViewController.swift */,
+				9437B4F01CD0947F00D37694 /* SubstitueViewController.swift */,
+			);
+			name = Generate;
+			sourceTree = "<group>";
+		};
+		947251C31CDE0B5B0063126F /* Efficiency */ = {
+			isa = PBXGroup;
+			children = (
+				9437B4F51CD0A45300D37694 /* EfficiencyViewController.swift */,
+			);
+			name = Efficiency;
+			sourceTree = "<group>";
+		};
+		94F5E0771CB2523600211152 /* PersonInfo */ = {
 			isa = PBXGroup;
 			children = (
 				94964BEA1CCFA80E00E95DEB /* LoginViewController.swift */,
 				94964BEB1CCFA80E00E95DEB /* ResetPasswordViewController.swift */,
 				94964BEC1CCFA80E00E95DEB /* SignUpViewController.swift */,
+				9416E5141C477D67003EE611 /* ProfileViewController.swift */,
 			);
-			name = Login;
+			name = PersonInfo;
 			sourceTree = "<group>";
 		};
-		94F5E0781CB2529300211152 /* ViewController */ = {
+		94F5E0781CB2529300211152 /* DisplayData */ = {
 			isa = PBXGroup;
 			children = (
-				941BC3871CD9B6D500945622 /* MasterViewController.swift */,
-				941BC3881CD9B6D500945622 /* DetailViewController.swift */,
-				941BC3891CD9B6D500945622 /* AddContactViewController.swift */,
+				947251C01CDE0A850063126F /* Predict */,
+				947251C11CDE0AAD0063126F /* Consume */,
+				947251C21CDE0B1B0063126F /* Generate */,
+				947251C31CDE0B5B0063126F /* Efficiency */,
 				9416E4E41C47776B003EE611 /* GrossViewController.swift */,
 				9416E5121C477C59003EE611 /* DeviceTableViewController.swift */,
 				94F5E0651CB2364A00211152 /* CompositionTableViewController.swift */,
-				94964BE51CCFA76200E95DEB /* ConsumeViewController.swift */,
-				9416E5141C477D67003EE611 /* ProfileViewController.swift */,
-				9446585E1CCC8CE200CE54E0 /* PredictViewController.swift */,
-				9437B4EC1CD04EC400D37694 /* GenerateViewController.swift */,
-				9437B4EE1CD08F2500D37694 /* ConVSGenViewController.swift */,
-				9437B4F01CD0947F00D37694 /* SubstitueViewController.swift */,
-				9437B4F51CD0A45300D37694 /* EfficiencyViewController.swift */,
-				941151DC1CD0A92F007844E4 /* PredictStateViewController.swift */,
-				941151E01CD102F2007844E4 /* ComparisonViewController.swift */,
 			);
-			name = ViewController;
+			name = DisplayData;
 			sourceTree = "<group>";
 		};
 		94F5E0791CB252C600211152 /* Source */ = {
@@ -283,6 +332,10 @@
 				94F5E06B1CB24D7F00211152 /* DrawCharts.swift */,
 				944658601CCCC52B00CE54E0 /* Weather.swift */,
 				945D2FAB1CCE6A6200DB3138 /* SpinningView.swift */,
+				94C3CE121CE181B70088BC7F /* FetchGenerateData.swift */,
+				94C3CE161CE223B10088BC7F /* FetchConsumeData.swift */,
+				94C3CE181CE2300E0088BC7F /* PolyFit.swift */,
+				94C3CE1B1CE38D220088BC7F /* FetchWeatherData.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -298,9 +351,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9416E4DE1C47776B003EE611 /* PJDemo */ = {
+		9416E4DE1C47776B003EE611 /* SolarPower */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9416E5091C47776B003EE611 /* Build configuration list for PBXNativeTarget "PJDemo" */;
+			buildConfigurationList = 9416E5091C47776B003EE611 /* Build configuration list for PBXNativeTarget "SolarPower" */;
 			buildPhases = (
 				A899DFF3E61B3A22037B4873 /* Check Pods Manifest.lock */,
 				9416E4DB1C47776B003EE611 /* Sources */,
@@ -315,14 +368,14 @@
 			dependencies = (
 				9416E5421C479733003EE611 /* PBXTargetDependency */,
 			);
-			name = PJDemo;
+			name = SolarPower;
 			productName = PJDemo;
-			productReference = 9416E4DF1C47776B003EE611 /* PJDemo.app */;
+			productReference = 9416E4DF1C47776B003EE611 /* SolarPower.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9416E4F41C47776B003EE611 /* PJDemoTests */ = {
+		9416E4F41C47776B003EE611 /* SolarPowerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9416E50C1C47776B003EE611 /* Build configuration list for PBXNativeTarget "PJDemoTests" */;
+			buildConfigurationList = 9416E50C1C47776B003EE611 /* Build configuration list for PBXNativeTarget "SolarPowerTests" */;
 			buildPhases = (
 				9416E4F11C47776B003EE611 /* Sources */,
 				9416E4F21C47776B003EE611 /* Frameworks */,
@@ -333,14 +386,14 @@
 			dependencies = (
 				9416E4F71C47776B003EE611 /* PBXTargetDependency */,
 			);
-			name = PJDemoTests;
+			name = SolarPowerTests;
 			productName = PJDemoTests;
-			productReference = 9416E4F51C47776B003EE611 /* PJDemoTests.xctest */;
+			productReference = 9416E4F51C47776B003EE611 /* SolarPower.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9416E4FF1C47776B003EE611 /* PJDemoUITests */ = {
+		9416E4FF1C47776B003EE611 /* SolarPowerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9416E50F1C47776B003EE611 /* Build configuration list for PBXNativeTarget "PJDemoUITests" */;
+			buildConfigurationList = 9416E50F1C47776B003EE611 /* Build configuration list for PBXNativeTarget "SolarPowerUITests" */;
 			buildPhases = (
 				9416E4FC1C47776B003EE611 /* Sources */,
 				9416E4FD1C47776B003EE611 /* Frameworks */,
@@ -351,9 +404,9 @@
 			dependencies = (
 				9416E5021C47776B003EE611 /* PBXTargetDependency */,
 			);
-			name = PJDemoUITests;
+			name = SolarPowerUITests;
 			productName = PJDemoUITests;
-			productReference = 9416E5001C47776B003EE611 /* PJDemoUITests.xctest */;
+			productReference = 9416E5001C47776B003EE611 /* SolarPower.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -380,7 +433,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9416E4DA1C47776B003EE611 /* Build configuration list for PBXProject "PJDemo" */;
+			buildConfigurationList = 9416E4DA1C47776B003EE611 /* Build configuration list for PBXProject "SolarPower" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -399,9 +452,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				9416E4DE1C47776B003EE611 /* PJDemo */,
-				9416E4F41C47776B003EE611 /* PJDemoTests */,
-				9416E4FF1C47776B003EE611 /* PJDemoUITests */,
+				9416E4DE1C47776B003EE611 /* SolarPower */,
+				9416E4F41C47776B003EE611 /* SolarPowerTests */,
+				9416E4FF1C47776B003EE611 /* SolarPowerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -511,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9446585F1CCC8CE200CE54E0 /* PredictViewController.swift in Sources */,
+				94C3CE131CE181B70088BC7F /* FetchGenerateData.swift in Sources */,
 				94964BEE1CCFA80E00E95DEB /* ResetPasswordViewController.swift in Sources */,
 				945D2FAC1CCE6A6200DB3138 /* SpinningView.swift in Sources */,
 				94F5E0661CB2364A00211152 /* CompositionTableViewController.swift in Sources */,
@@ -520,6 +574,7 @@
 				94964BEF1CCFA80E00E95DEB /* SignUpViewController.swift in Sources */,
 				941151E11CD102F2007844E4 /* ComparisonViewController.swift in Sources */,
 				9416E5131C477C59003EE611 /* DeviceTableViewController.swift in Sources */,
+				94C3CE1C1CE38D220088BC7F /* FetchWeatherData.swift in Sources */,
 				9416E5151C477D67003EE611 /* ProfileViewController.swift in Sources */,
 				941BC38B1CD9B6D500945622 /* DetailViewController.swift in Sources */,
 				9437B4F11CD0947F00D37694 /* SubstitueViewController.swift in Sources */,
@@ -527,12 +582,14 @@
 				9437B4EF1CD08F2500D37694 /* ConVSGenViewController.swift in Sources */,
 				944658611CCCC52B00CE54E0 /* Weather.swift in Sources */,
 				94F5E06C1CB24D7F00211152 /* DrawCharts.swift in Sources */,
+				94C3CE171CE223B10088BC7F /* FetchConsumeData.swift in Sources */,
 				9416E4E31C47776B003EE611 /* AppDelegate.swift in Sources */,
 				94964BED1CCFA80E00E95DEB /* LoginViewController.swift in Sources */,
 				9416E4E51C47776B003EE611 /* GrossViewController.swift in Sources */,
 				941BC38C1CD9B6D500945622 /* AddContactViewController.swift in Sources */,
 				94964BE61CCFA76200E95DEB /* ConsumeViewController.swift in Sources */,
 				9437B4F61CD0A45300D37694 /* EfficiencyViewController.swift in Sources */,
+				94C3CE191CE2300E0088BC7F /* PolyFit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,12 +614,12 @@
 /* Begin PBXTargetDependency section */
 		9416E4F71C47776B003EE611 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9416E4DE1C47776B003EE611 /* PJDemo */;
+			target = 9416E4DE1C47776B003EE611 /* SolarPower */;
 			targetProxy = 9416E4F61C47776B003EE611 /* PBXContainerItemProxy */;
 		};
 		9416E5021C47776B003EE611 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9416E4DE1C47776B003EE611 /* PJDemo */;
+			target = 9416E4DE1C47776B003EE611 /* SolarPower */;
 			targetProxy = 9416E5011C47776B003EE611 /* PBXContainerItemProxy */;
 		};
 		9416E5421C479733003EE611 /* PBXTargetDependency */ = {
@@ -687,7 +744,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jane.project.PJDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SolarPower;
 				SWIFT_OBJC_BRIDGING_HEADER = "PJDemo/PJDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -705,7 +762,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jane.project.PJDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SolarPower;
 				SWIFT_OBJC_BRIDGING_HEADER = "PJDemo/PJDemo-Bridging-Header.h";
 			};
 			name = Release;
@@ -717,8 +774,8 @@
 				INFOPLIST_FILE = PJDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jane.project.PJDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PJDemo.app/PJDemo";
+				PRODUCT_NAME = SolarPower;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SolarPower.app/SolarPower";
 			};
 			name = Debug;
 		};
@@ -729,8 +786,8 @@
 				INFOPLIST_FILE = PJDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jane.project.PJDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PJDemo.app/PJDemo";
+				PRODUCT_NAME = SolarPower;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SolarPower.app/SolarPower";
 			};
 			name = Release;
 		};
@@ -740,7 +797,7 @@
 				INFOPLIST_FILE = PJDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jane.project.PJDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SolarPower;
 				TEST_TARGET_NAME = PJDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -752,7 +809,7 @@
 				INFOPLIST_FILE = PJDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jane.project.PJDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SolarPower;
 				TEST_TARGET_NAME = PJDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -761,7 +818,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9416E4DA1C47776B003EE611 /* Build configuration list for PBXProject "PJDemo" */ = {
+		9416E4DA1C47776B003EE611 /* Build configuration list for PBXProject "SolarPower" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9416E5071C47776B003EE611 /* Debug */,
@@ -770,7 +827,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9416E5091C47776B003EE611 /* Build configuration list for PBXNativeTarget "PJDemo" */ = {
+		9416E5091C47776B003EE611 /* Build configuration list for PBXNativeTarget "SolarPower" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9416E50A1C47776B003EE611 /* Debug */,
@@ -779,7 +836,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9416E50C1C47776B003EE611 /* Build configuration list for PBXNativeTarget "PJDemoTests" */ = {
+		9416E50C1C47776B003EE611 /* Build configuration list for PBXNativeTarget "SolarPowerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9416E50D1C47776B003EE611 /* Debug */,
@@ -788,7 +845,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9416E50F1C47776B003EE611 /* Build configuration list for PBXNativeTarget "PJDemoUITests" */ = {
+		9416E50F1C47776B003EE611 /* Build configuration list for PBXNativeTarget "SolarPowerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9416E5101C47776B003EE611 /* Debug */,

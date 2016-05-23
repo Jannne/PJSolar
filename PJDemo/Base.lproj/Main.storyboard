@@ -363,7 +363,6 @@
         <!--Compare-->
         <scene sceneID="dNL-zV-ZAt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dtU-rh-s0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="CZ8-Fr-tQA" customClass="ComparisonViewController" customModule="PJDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Aqm-6F-a0c"/>
@@ -376,6 +375,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Compare" image="Compare" selectedImage="Compare" id="kcY-5w-Jrf"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtU-rh-s0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-611" y="291"/>
         </scene>
@@ -984,7 +984,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bj9-mV-DNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="g6I-RN-jU8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="681.60000000000002" y="-1169.1333333333332"/>
+            <point key="canvasLocation" x="761" y="-1189"/>
         </scene>
         <!--Photovoltaic-->
         <scene sceneID="xsa-l3-OTU">
@@ -1019,23 +1019,19 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCN-Fh-QjU">
                                 <rect key="frame" x="20" y="456" width="156" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Consume vs. Generate">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Consume vs. Generate"/>
                                 <connections>
                                     <segue destination="hw8-An-Ija" kind="push" id="8dB-bu-pXN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypy-Q5-wmu">
                                 <rect key="frame" x="252" y="456" width="122" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="122" id="IwS-ld-939"/>
                                 </constraints>
-                                <state key="normal" title="Substitution Rate">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Substitution Rate"/>
                                 <connections>
                                     <segue destination="Nat-Ky-XcT" kind="push" id="Lip-gO-F2f"/>
                                 </connections>
@@ -1389,7 +1385,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waq-gq-c1p" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="2004"/>
+            <point key="canvasLocation" x="363" y="1860"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="URy-cR-5oz">

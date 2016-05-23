@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9416E4DE1C47776B003EE611"
-               BuildableName = "PJDemo.app"
-               BlueprintName = "PJDemo"
-               ReferencedContainer = "container:PJDemo.xcodeproj">
+               BuildableName = "SolarPower.app"
+               BlueprintName = "SolarPower"
+               ReferencedContainer = "container:SolarPower.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9416E4F41C47776B003EE611"
-               BuildableName = "PJDemoTests.xctest"
-               BlueprintName = "PJDemoTests"
-               ReferencedContainer = "container:PJDemo.xcodeproj">
+               BuildableName = "SolarPower.xctest"
+               BlueprintName = "SolarPowerTests"
+               ReferencedContainer = "container:SolarPower.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9416E4FF1C47776B003EE611"
-               BuildableName = "PJDemoUITests.xctest"
-               BlueprintName = "PJDemoUITests"
-               ReferencedContainer = "container:PJDemo.xcodeproj">
+               BuildableName = "SolarPower.xctest"
+               BlueprintName = "SolarPowerUITests"
+               ReferencedContainer = "container:SolarPower.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9416E4DE1C47776B003EE611"
-            BuildableName = "PJDemo.app"
-            BlueprintName = "PJDemo"
-            ReferencedContainer = "container:PJDemo.xcodeproj">
+            BuildableName = "SolarPower.app"
+            BlueprintName = "SolarPower"
+            ReferencedContainer = "container:SolarPower.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9416E4DE1C47776B003EE611"
-            BuildableName = "PJDemo.app"
-            BlueprintName = "PJDemo"
-            ReferencedContainer = "container:PJDemo.xcodeproj">
+            BuildableName = "SolarPower.app"
+            BlueprintName = "SolarPower"
+            ReferencedContainer = "container:SolarPower.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9416E4DE1C47776B003EE611"
-            BuildableName = "PJDemo.app"
-            BlueprintName = "PJDemo"
-            ReferencedContainer = "container:PJDemo.xcodeproj">
+            BuildableName = "SolarPower.app"
+            BlueprintName = "SolarPower"
+            ReferencedContainer = "container:SolarPower.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

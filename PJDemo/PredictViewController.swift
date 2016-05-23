@@ -21,6 +21,7 @@ class PredictViewController: UIViewController ,UITableViewDelegate, UITableViewD
     
     var date = NSDate()
     let dateFormatter = NSDateFormatter()
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     
     
@@ -104,6 +105,8 @@ class PredictViewController: UIViewController ,UITableViewDelegate, UITableViewD
         updateUI()
         predictTableView.delegate = self
         predictTableView.dataSource = self
+        var weatherData = self.appDelegate.getWeatherData()
+        
         // Do any additional setup after loading the view.
     }
     

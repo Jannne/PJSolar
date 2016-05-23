@@ -13,16 +13,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    let weatherData = FetchWeatherData()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Parse.enableLocalDatastore()
         Parse.setApplicationId("SgowEgooeZnxvaWJYQ6FmMJKVm65f0AlPpKiwpCu", clientKey: "ddRJyU3BAaFQl3CfFZbwZqpL3zOMjPebLtC077gF")
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        
+        weatherData.fetchWeatherInfo()
+        
         //var tableVC : DeviceTableViewController = DeviceTableViewController(className: "Cat")
         //UINavigationBar
         return true
+    }
+    
+    func getWeatherData()->FetchWeatherData{
+        return weatherData
     }
 
     func applicationWillResignActive(application: UIApplication) {

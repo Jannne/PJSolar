@@ -59,49 +59,51 @@ class SpinningView: UIView {
     let strokeEndAnimation : CAAnimation = {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.fromValue = 0
-        animation.toValue = 0.75
-        animation.duration = 5
+        animation.toValue = 1
+        animation.duration = 4
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         
         let group = CAAnimationGroup()
-        group.duration = 5
+        group.duration = 4
         group.repeatCount = HUGE
         group.animations = [animation]
         animation.repeatCount = 2
         return group
         }()
     
-    //    let strokeStartAnimation: CAAnimation = {
-    //        let animation = CABasicAnimation(keyPath: "strokeStart")
-    //        animation.beginTime = 0.8
-    //        animation.fromValue = 0
-    //        animation.toValue = 1
-    //        animation.duration = 4
-    //        animation.fillMode = kCAFillRuleNonZero
-    //        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-    //
-    //        let group = CAAnimationGroup()
-    //        group.duration = 4
-    //        group.repeatCount = 2
-    //        group.animations = [animation]
-    //
-    //        return group
-    //        }()
-    //
-    //    let rotationAnimation: CAAnimation = {
-    //        let animation = CABasicAnimation(keyPath: "transform.rotation.z")
-    //        animation.fromValue = 0
-    //        animation.toValue = M_PI * 2
-    //        animation.duration = 8
-    //        animation.repeatCount = HUGE
-    //        return animation
-    //        }()
+    let strokeStartAnimation: CAAnimation = {
+        let animation = CABasicAnimation(keyPath: "strokeStart")
+        animation.beginTime = 0.9
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.duration = 4
+        animation.fillMode = kCAFillRuleNonZero
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        
+        let group = CAAnimationGroup()
+        group.duration = 4
+        group.repeatCount = HUGE
+        group.animations = [animation]
+        
+        return group
+        }()
+    
+    let rotationAnimation: CAAnimation = {
+        let animation = CABasicAnimation(keyPath: "transform.rotation.z")
+        animation.fromValue = 0
+        animation.toValue = M_PI * 2
+        animation.duration = 4
+        animation.repeatCount = HUGE
+        return animation
+        }()
     
     weak var dataSource : SpinningViewDataSource?
     
     func updateAnimation() {
         //print(dataSource?.percentForSpinningView(self))
         circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEnd")
+        circleLayer.addAnimation(strokeStartAnimation, forKey: "strokeStart")
+        circleLayer.addAnimation(rotationAnimation , forKey: "rotation")
         circleLayer.strokeStart = 0
         var percentage = dataSource?.percentForSpinningView(self) ?? 0.0
         circleLayer.strokeEnd =  CGFloat(percentage)

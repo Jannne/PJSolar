@@ -13,25 +13,23 @@ class DeviceTableViewController: UITableViewController{
     var parseObject : PFObject?
     let deviceTable = ["Building Comsumption","Photovoltaic Generation","Building Efficiency"]
     
-   /* override func queryForTable() -> PFQuery {
-        var query : PFQuery = PFQuery(className: "Cat")
-        
-        if (objects?.count == 0){
-            query.cachePolicy = PFCachePolicy.CacheThenNetwork
-        }
-        query.orderByAscending("name")
-        return query
-    }
-    */
+    let generateData = FetchGenerateData()
+    let consumeData = FetchConsumeData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        generateData.callPFObjectQueryGenDaily()
+        generateData.callPFObjectQueryGenWeekly()
+        generateData.callPFObjectQueryGenMonthly()
+        generateData.callPFObjectQueryGenYearly()
+        
+        consumeData.callPFObjectQueryConDaily()
+        consumeData.callPFObjectQueryConWeekly()
+        consumeData.callPFObjectQueryConMonthly()
+        consumeData.callPFObjectQueryConYearly()
+ 
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +71,7 @@ class DeviceTableViewController: UITableViewController{
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row{
         case 0: self.performSegueWithIdentifier("consumeSegue", sender: self);
+        
         break;
         case 1: self.performSegueWithIdentifier("generateSegue", sender: self);
         break;
@@ -81,6 +80,25 @@ class DeviceTableViewController: UITableViewController{
         default:
             break
         }    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "generateSegue"){
+            let viewController = segue.destinationViewController as? GenerateViewController
+            viewController?.dailyData = generateData.dailyData
+            viewController?.weeklyData = generateData.weeklyData
+            viewController?.monthlyData = generateData.monthlyData
+            viewController?.yearlyData = generateData.yearlyData
+            //presentViewController(viewController!, animated: true, completion: nil)
+        }
+        if(segue.identifier == "consumeSegue"){
+            let viewController = segue.destinationViewController as? ConsumeViewController
+            viewController?.dailyData = consumeData.dailyData
+            viewController?.weeklyData = consumeData.weeklyData
+            viewController?.monthlyData = consumeData.monthlyData
+            viewController?.yearlyData = consumeData.yearlyData
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
