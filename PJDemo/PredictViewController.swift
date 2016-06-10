@@ -22,8 +22,9 @@ class PredictViewController: UIViewController ,UITableViewDelegate, UITableViewD
     var date = NSDate()
     let dateFormatter = NSDateFormatter()
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    
-    
+
+    let powerSet = [20.0, 15.6, 17.8, 14.6, 12.1]
+    let futureInfo : [(Double,String)] = [(25,"rainy"),(20.2, "cloudy"),(27,"overcast"),(26.2, "sunny"),(24,"rainy")]
     
     func getPredictPowerPerHour(type: Weather.WeatherType, temperature: Double)->Double
     {
@@ -54,12 +55,14 @@ class PredictViewController: UIViewController ,UITableViewDelegate, UITableViewD
         return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return temperaturePredict.count
+        return 5
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = predictTableView.dequeueReusableCellWithIdentifier("predictCell", forIndexPath: indexPath) as! UITableViewCell
-        let weather = temperaturePredict[indexPath.row]
-        cell.textLabel?.text = dateArray[indexPath.row] + "      " + String(weather.weatherType) + "      " + String(weather.temperature)
+        let weather = self.futureInfo[indexPath.row]
+        
+        cell.textLabel?.text = dateArray[indexPath.row] + "      " + String(weather.0) + "      " + String(weather.1) + "       " + String(self.powerSet[indexPath.row])
+        cell.textLabel?.textAlignment = .Natural
         return cell
     }
     
@@ -75,7 +78,13 @@ class PredictViewController: UIViewController ,UITableViewDelegate, UITableViewD
     func updateUI()
     {
         predictChartView.clear()
-        let powerSet =  self.getAllPredictPower(self.temperaturePredict)
+        self.predictTableView.reloadData()
+        var weatherData = self.appDelegate.getWeatherData()
+        let rainyData = weatherData.rainyData
+        let rainyTemp = weatherData.rainyTemp
+        
+        
+       // let powerSet =  self.getAllPredictPower(self.temperaturePredict)
         drawLineCharts(self.predictChartView, dataPoints: dateArray, values: powerSet)
     }
     
@@ -93,19 +102,12 @@ class PredictViewController: UIViewController ,UITableViewDelegate, UITableViewD
             date = nextDate
         }
         
-        let weather = Weather(weatherType: .Cloudy, temperature: 25)
-        temperaturePredict.append(weather)
-        temperaturePredict.append(Weather(weatherType: .Sunny, temperature: 30.0))
-        temperaturePredict.append(Weather(weatherType: .Rainy, temperature: 21.0))
-        temperaturePredict.append(Weather(weatherType: .Overcast, temperature: 27.0))
-        temperaturePredict.append(Weather(weatherType: .Sunny, temperature: 29.0))
-        
 //        let powerSet =  self.getAllPredictPower(self.temperaturePredict)
 //        drawLineCharts(self.predictChartView, dataPoints: dateArray, values: powerSet)
         updateUI()
         predictTableView.delegate = self
         predictTableView.dataSource = self
-        var weatherData = self.appDelegate.getWeatherData()
+     
         
         // Do any additional setup after loading the view.
     }

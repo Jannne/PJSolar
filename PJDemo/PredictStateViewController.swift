@@ -14,10 +14,12 @@ class PredictStateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.text =
-        "利用光伏发电系统历史发电数据，太阳辐照度数据和气象数据建立多元多项式回归模型，然后建立以气温为输入变量的预测模型。\n" +
-        "P = -1.10730 - 0.00073 * T * H + 0.07630 * H - 0.00001 * H^2\n" +
-        "太阳辐照度的变化具有动态性，多干扰性等特点，其中云量，大气状况，天气状况等因素的影响至关重要，由于天气预报并未提供统计方法所需要的太阳辐照度预报值，但在同一天气类型下，我们可以认为每天的有效太阳辐照度平均值近似相等。"
         
+        "Using photovoltaic power generation system, historical data, solar irradiance data and meteorological data to establish multivariate polynomial regression model, and then build the prediction model to input the future temperature as input variables \n\n" +
+        "       P = a + b * T * H + c * H + d * H^2 \n\n" +
+            
+       " Changes in solar irradiance are dynamic, multi-interference and other characteristics, which affect vital cloud cover, atmospheric conditions, weather conditions and other factors. Since the weather forecasting does not provide statistical methods of irradiance value forecasting needed for solar power generation prediction, but at the same type of weather, we can assume that the average daily effective solar irradiance are approximately equal.\n\n" +
+        "Solar energy resource is one of the most abundant renewable energy sources, it is internationally recognized as the ideal replacement for conventional energy sources such as oil, gas, coal and other fossil-based energy. In short term, photovoltaic power generation can complement conventional energy, resolve residential electricity demand. From long term perspective, with distributed PV power getting into the electricity market, and replace part of conventional energy, it also has great significance in environmental protection and energy strategy. A number of companies has been rising to develop solar energy resources, meantime provide users real-time monitoring data of power generation efficiency applications."
         
         // Do any additional setup after loading the view.
     }

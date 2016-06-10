@@ -13,6 +13,7 @@ class GrossViewController: UIViewController,SpinningViewDataSource ,CLLocationMa
 
     @IBOutlet weak var dateLabel: UILabel!
     
+
     @IBOutlet weak var temperatureImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
@@ -38,7 +39,7 @@ class GrossViewController: UIViewController,SpinningViewDataSource ,CLLocationMa
     let consume_value = [150.0 , 400.0 , 100.0]
     
     let consume_v_generate = ["1","2","3","4","5","6","7"]
-    let consume_data = [3.0 , 6.6 , 7.9 , 4.7 , 9.7 , 3.6 , 2.0]
+    let consume_data = [12.0 , 15.6 , 17.9 , 20.7 , 15.7 , 17.6 , 15.0]
     let generate_value = [2.5 , 6.9, 4.1, 10.0 , 3.9, 9.0 , 5.0 ]
     
     var percentage : Double = 0.0{
@@ -50,20 +51,15 @@ class GrossViewController: UIViewController,SpinningViewDataSource ,CLLocationMa
     }
     func updateUI(){
         
-        
         //spinningView.setup()
-        
+        let carbon = 0.272 * 15
         
         spinningView.updateAnimation()
-        
-        self.ConvsGenBarChartView.descriptionText = ""
-        self.ConvsGenBarChartView.xAxis.labelPosition = .Bottom
-        self.ConvsGenBarChartView.leftAxis.labelPosition = .OutsideChart
-        // self.ConvsGenBarChartView.backgroundColor = UIColor.whiteColor()
+     
         self.ConvsGenBarChartView.gridBackgroundColor = UIColor.whiteColor()
-        drawMultiBarCharts(ConvsGenBarChartView, dataPoints: consume_v_generate, values: [consume_data,generate_value], labels: ["耗电","发电"])
-        
-        percentLabel.text = "75%"
+        drawMultiBarCharts(ConvsGenBarChartView, dataPoints: consume_v_generate, values: [consume_data,generate_value], labels: ["Consumption","Generation"])
+        //drawCubicCharts(ConvsGenBarChartView, dataPoints: consume_v_generate, values: consume_data)
+        percentLabel.text = "\(carbon) KG"
         temperatureLabel.text = "27"
         dateFormatter.dateFormat = "YYYY-MM-dd"
         dateLabel.text = dateFormatter.stringFromDate(date)

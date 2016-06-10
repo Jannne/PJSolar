@@ -16,7 +16,7 @@ class EfficiencyViewController: UIViewController {
     @IBOutlet weak var barChartView: BarChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        drawMultiBarCharts(barChartView, dataPoints: mode, values: [data], labels: ["Efficiency"])
+        drawMultiBarCharts(barChartView, dataPoints: mode, values: [data], labels: ["BUILDING EFFICIENCY"])
 
         // Do any additional setup after loading the view.
     }

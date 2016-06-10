@@ -32,8 +32,8 @@ class FetchGenerateData{
         //get current date
         
         dateFormatter.dateFormat = "YYMMdd"
-        let dateDescrip = dateFormatter.stringFromDate(date)
-        
+        //let dateDescrip = dateFormatter.stringFromDate(date)
+        let dateDescrip = "160519"
         query.whereKey("time", containsString: dateDescrip)
         query.orderByAscending("time")
       
@@ -80,7 +80,10 @@ class FetchGenerateData{
     
     func callPFObjectQueryGenWeekly(){
         let genData_Id = (PFUser.currentUser()!["genData_Id"] as? String) ?? ""
-        let dateArray = getWeekDate(date)
+        dateFormatter.dateFormat = "YYMMdd"
+        let oldDate = dateFormatter.dateFromString("160519")
+        let dateArray = getWeekDate(oldDate!)
+        
         let count = dateArray.count
         
         for index in 1...count{

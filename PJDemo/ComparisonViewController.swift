@@ -25,7 +25,7 @@ class ComparisonViewController: UIViewController {
     @IBOutlet weak var radarChartView: RadarChartView!
     
 
-    let dataPoints = ["发电","耗电","空调"]
+    let dataPoints = ["GENERATION","CONSUMPTION","AIR CONDITIONER"]
     let values1 = [25.0, 14.0, 10]
     let values2 = [30.0, 20.0, 15]
     var labels = ["YOU", "FRIEND"]

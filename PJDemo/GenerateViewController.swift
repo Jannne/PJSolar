@@ -54,10 +54,10 @@ class GenerateViewController: UIViewController {
     
     @IBAction func indexChanged(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
-        case 0: drawBarCharts(barChartView, dataPoints: daily, values: dailyData)
-        case 1: drawBarCharts(barChartView, dataPoints: weekly, values: weeklyData)
-        case 2: drawBarCharts(barChartView, dataPoints: monthly, values: monthlyData)
-        case 3: drawBarCharts(barChartView, dataPoints: yearly, values: yearlyData)
+        case 0: drawBarCharts(barChartView, dataPoints: daily, values: dailyData, labelText: "Daily Generation")
+        case 1: drawBarCharts(barChartView, dataPoints: weekly, values: weeklyData, labelText : "Weekly Generation")
+        case 2: drawBarCharts(barChartView, dataPoints: monthly, values: monthlyData, labelText : "Monthly Generation")
+        case 3: drawBarCharts(barChartView, dataPoints: yearly, values: yearlyData, labelText : "Yearly Generation")
         default: break
         }
     }
@@ -65,7 +65,9 @@ class GenerateViewController: UIViewController {
     @IBOutlet weak var barChartView: BarChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        drawBarCharts(barChartView, dataPoints: daily, values: dailyData)
+        drawBarCharts(barChartView, dataPoints: daily, values: dailyData, labelText: "Daily Generation")
+        weeklyData = [12.9, 15.6, 20.4, 18.0, 17.5, 13.4, 18.9]
+        yearlyData = [340.5, 356.4, 400.2, 396.3, 412.6, 439.7, 456.9, 478.3, 498.3, 500.4, 540.2, 512.3]
         //drawMultiBarCharts(barChartView, dataPoints: daily, values: [dailyData],labels:["发电"])
         compareButton.layer.cornerRadius = 4
         substituteButton.layer.cornerRadius = 4

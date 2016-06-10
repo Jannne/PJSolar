@@ -11,7 +11,7 @@ import UIKit
 class DeviceTableViewController: UITableViewController{
 
     var parseObject : PFObject?
-    let deviceTable = ["Building Comsumption","Photovoltaic Generation","Building Efficiency"]
+    let deviceTable = ["Building Comsumption","Photovoltaic Generation","Building Efficiency","Search By Date"]
     
     let generateData = FetchGenerateData()
     let consumeData = FetchConsumeData()
@@ -58,18 +58,32 @@ class DeviceTableViewController: UITableViewController{
         cell.titleLabel.text = deviceTable[indexPath.row]
         
         switch indexPath.row{
-        case 0: cell.bkImageView.image = UIImage(named: "Home")
-        case 1: cell.bkImageView.image =  UIImage(named: "Solar")
-        case 2: cell.bkImageView.image =  UIImage(named: "Composition")
+        case 0: cell.bkImageView.image = UIImage(named: "Home1")
+        case 1: cell.bkImageView.image =  UIImage(named: "Solar1")
+        case 2: cell.bkImageView.image =  UIImage(named: "Composition1")
+        case 3: cell.bkImageView.image = UIImage(named: "Date")
         default:break
         }
         
-
+        
         return cell
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let indexPath = tableView.indexPathForSelectedRow
+        //tableView.reloadData()
+        if((indexPath) != nil){
+            tableView.deselectRowAtIndexPath(indexPath!, animated: true)
+        }
+    }
+    
+   
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //tableView(tableView, didDeselectRowAtIndexPath: indexPath.row)
+        
         switch indexPath.row{
+            
         case 0: self.performSegueWithIdentifier("consumeSegue", sender: self);
         
         break;
@@ -77,6 +91,7 @@ class DeviceTableViewController: UITableViewController{
         break;
         case 2: self.performSegueWithIdentifier("efficientSegue", sender: self);
         break;
+        case 3: self.performSegueWithIdentifier("search", sender: self)
         default:
             break
         }    }

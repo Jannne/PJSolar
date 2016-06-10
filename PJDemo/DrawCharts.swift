@@ -13,6 +13,8 @@ import Charts
 var chartColors : [UIColor] = [UIColor.lightGrayColor().colorWithAlphaComponent(0.5),UIColor(red: 127/255, green: 1, blue: 212/255, alpha: 0.8), UIColor(red: 1, green: 250/255, blue: 205/255, alpha: 0.8), UIColor.purpleColor(), UIColor.yellowColor(),UIColor(red: 123/255, green: 104/255, blue: 238/255, alpha: 0.6)]
 //(127,255,212) (255,250,205)(123,104,238)
 
+var lineColors : [UIColor] = [UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1), UIColor(red: 60/255, green: 179/255, blue: 113/255, alpha: 1)]
+
 var pieColors : [UIColor] = [UIColor.lightGrayColor(), UIColor(red: 1.0, green: 0, blue: 0, alpha: 0.7)]
 func setChartLineData(set: LineChartDataSet, color: UIColor)
 {
@@ -49,7 +51,7 @@ func drawRadarChart(radarChartView:RadarChartView, dataPoints : [String], values
     
     let radarChartData = RadarChartData(xVals: dataPoints, dataSet: radarChartDataSet)
     radarChartView.data = radarChartData
-    radarChartView.descriptionText = "Radar Chart"
+    radarChartView.descriptionText = "Comparison"
     radarChartView.animate(xAxisDuration: 2)
     
     
@@ -95,15 +97,41 @@ func drawMultiLineCharts(lineChartView:LineChartView,dataPoints:[String],values:
         lineChartDataSet.circleColors = [UIColor.blackColor()]
         lineChartDataSet.lineWidth = 5
         lineChartDataSet.circleColors = [chartColors[i]]
-        setChartLineData(lineChartDataSet, color: pieColors[i])
+        setChartLineData(lineChartDataSet, color:lineColors[i] )
         dataSets.append(lineChartDataSet)
         
     }
     let data: LineChartData = LineChartData(xVals: dataPoints, dataSets: dataSets)
-    
+    lineChartView.descriptionText = ""
     lineChartView.data = data
     
     
+}
+
+func drawCubicCharts(lineChartView : LineChartView,dataPoints: [String], values: [Double]){
+    var dataEntries : [ChartDataEntry] = []
+    for i in 0 ..< dataPoints.count{
+        let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+        dataEntries.append(dataEntry)
+    }
+    let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Generation")
+    lineChartDataSet.lineWidth = 1
+    lineChartDataSet.circleRadius = 0.2
+    lineChartDataSet.drawCubicEnabled = true
+    lineChartDataSet.drawFilledEnabled = true
+    lineChartDataSet.fillColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.5)
+    
+    lineChartDataSet.colors = [UIColor.lightGrayColor().colorWithAlphaComponent(0.4)]
+    //setChartLineData(lineChartDataSet, color: UIColor.darkGrayColor().colorWithAlphaComponent(0.5))
+    let lineChartData = LineChartData(xVals: dataEntries, dataSet: lineChartDataSet)
+    lineChartView.data = lineChartData
+    lineChartView.descriptionText = ""
+    lineChartView.backgroundColor = UIColor.whiteColor()
+    lineChartView.gridBackgroundColor = UIColor.whiteColor()
+    lineChartView.xAxis.labelPosition = .BottomInside
+    lineChartView.leftAxis.labelPosition = .OutsideChart
+    
+    lineChartView.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
 }
 
 func drawLineCharts(lineChartView:LineChartView,dataPoints : [String],values: [Double])
@@ -169,27 +197,42 @@ func drawMultiBarCharts(barChartView:BarChartView,dataPoints : [String],values: 
     let data: BarChartData = BarChartData(xVals: dataPoints, dataSets: dataSets)
     barChartView.data = data
     barChartView.descriptionText = ""
+    barChartView.xAxis.labelPosition = .Bottom
     //barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption:)
     barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     
 }
 
-func drawBarCharts(barChartView:BarChartView,dataPoints : [String],values: [Double])
+func drawBarCharts(barChartView:BarChartView,dataPoints : [String],values: [Double],labelText: String)
 {
+    barChartView.fitScreen()
     var dataEntries : [BarChartDataEntry] = []
     for i in 0 ..< dataPoints.count{
         let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
         dataEntries.append(dataEntry)
     }
     
-    let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: "some")
+    let barChartDataSet = BarChartDataSet(yVals: dataEntries, label: labelText)
+    
+
     let barChartData = BarChartData(xVals: dataPoints, dataSet: barChartDataSet)
+    
     barChartDataSet.colors = ChartColorTemplates.vordiplom()
+    barChartDataSet.barSpace = 0.5
+
+    barChartData.setValueTextColor(UIColor.darkGrayColor())
+    //barChartView.setVisibleXRange(minXRange: 10, maxXRange: 10)
+   // barChartView.setVisibleXRangeMaximum(10)
+    //barChartView.zoom((CGFloat)(dataPoints.count/24), scaleY: 1, x: barChartView.center.x, y: barChartView.center.y)
+    barChartView.scaleXEnabled = true
+    barChartView.scaleYEnabled = true
     barChartView.data = barChartData
     barChartView.descriptionText = " "
     barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     
 }
+
+
 
 func drawHorizontalBarCharts(barChartView:HorizontalBarChartView,dataPoints : [String],values: [Double])
 {

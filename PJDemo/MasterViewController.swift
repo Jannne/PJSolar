@@ -15,6 +15,7 @@ class MasterViewController: UITableViewController, CNContactPickerDelegate {
     var detailViewController: DetailViewController? = nil
     var objects = [CNContact]()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,8 +48,8 @@ class MasterViewController: UITableViewController, CNContactPickerDelegate {
     
     func retrieveContactsWithStore(store: CNContactStore){
         do{
-            let groups = try store.groupsMatchingPredicate(nil)
-            let predicate = CNContact.predicateForContactsInGroupWithIdentifier(groups[0].identifier)
+           // let groups = try store.groupsMatchingPredicate(nil)
+            //let predicate = CNContact.predicateForContactsInGroupWithIdentifier(groups[0].identifier)
             let keysToFetch = [CNContactFormatter.descriptorForRequiredKeysForStyle(.FullName),CNContactEmailAddressesKey]
             let fetchRequest = CNContactFetchRequest(keysToFetch: keysToFetch)
             do{
@@ -82,7 +83,14 @@ class MasterViewController: UITableViewController, CNContactPickerDelegate {
     override func viewWillAppear(animated: Bool) {
        // self.clearsSelectionOnViewWillAppear = self.splitViewController!.
         super.viewWillAppear(animated)
+        let indexPath = tableView.indexPathForSelectedRow
+        if(indexPath != nil){
+            tableView.deselectRowAtIndexPath(indexPath!, animated: true)
+            
+        }
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -136,10 +144,21 @@ class MasterViewController: UITableViewController, CNContactPickerDelegate {
         cell.detailTextLabel?.text = contact.emailAddresses.first?.value as? String
         return cell
     }
+   
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return false
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            objects.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
     }
 }
 

@@ -54,8 +54,8 @@ class ConsumeViewController: UIViewController, ChartViewDelegate {
     
     let unitsData_weekly = [50.0,70.0,30.0,40.0,60.0,89.0,78.0]
     
-    let monthly = ["Jul","Aug","Sep","Oct","Nov","Dec"]
-    let unitsSold_monthly = [120.0, 400.0, 260.0, 133.0, 152.0, 196.0]
+    let monthly = ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27", "28", "29","30"]
+    let unitsSold_monthly = [120.0, 400.0, 260.0, 133.0, 152.0, 196.0, 200.4, 165.8, 170.5, 156.5, 149.8, 160.8, 178.9, 200.2, 210.5,120.0, 400.0, 260.0, 133.0, 152.0, 196.0, 200.4, 165.8, 170.5, 156.5, 149.8, 160.8, 178.9, 200.2, 210.5]
     
     let yearly = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     let unitsSold_yearly = [1200.0, 1400.0, 2610.0, 1343.0, 1562.0, 1976.0, 1583.0, 1434.0,2870.0,1790.0, 2000.0,1980.0]
@@ -66,21 +66,25 @@ class ConsumeViewController: UIViewController, ChartViewDelegate {
         dateFormatter.dateFormat = "HH"
         
         switch sender.selectedSegmentIndex{
-        case 0: drawLineCharts(lineChartView, dataPoints: daily, values: unitsData_daily1)
+        case 0: setChart(daily, values: unitsData_daily1,label: "Daily Consumption")
          
         case 1:
-            drawLineCharts(lineChartView, dataPoints: weekly, values: unitsData_weekly)
+            setChart(weekly, values: unitsData_weekly, label : "Weekly Consumption")
             
-        case 2 : setChart(monthly , values: unitsSold_monthly)
+        case 2 : setChart(monthly , values: unitsSold_monthly , label : "Monthly Consumption")
   
-        case 3: setChart(yearly, values: unitsSold_yearly)
+        case 3: setChart(yearly, values: unitsSold_yearly, label: "Yearly Consumption")
     
         default : break
             
             
         }
     }
-    func setChart(dataPoints : [String],values: [Double]){
+    func setChart(dataPoints : [String],values: [Double],label: String){
+        lineChartView.fitScreen()
+        if(dataPoints.count != values.count){
+            return
+        }
         var dataEntries : [ChartDataEntry] = []
         for i in 0 ..< dataPoints.count{
             let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
@@ -88,13 +92,12 @@ class ConsumeViewController: UIViewController, ChartViewDelegate {
         }
     
         
-        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Unit Sold")
+        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: label)
         setChartLineData(lineChartDataSet, color: UIColor.darkGrayColor())
         let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
         lineChartData.setValueTextColor(UIColor.darkGrayColor())
         lineChartView.data = lineChartData
-        lineChartView.animate(xAxisDuration: 1.0, easingOption: ChartEasingOption.EaseInOutBounce)
-       
+        lineChartView.animate(xAxisDuration: 1.0, easingOption: ChartEasingOption.Linear)
     }
     func setChartDailySet(dataPoints:[String])
     {
@@ -148,7 +151,7 @@ class ConsumeViewController: UIViewController, ChartViewDelegate {
 
         self.lineChartView.descriptionText = ""
         
-        drawLineCharts(lineChartView, dataPoints: daily, values: unitsData_daily1)
+        setChart(daily, values: unitsData_daily1, label : "Daily Consumption")
         
 //        totalSwitch.addTarget(self, action: Selector("switchIsChanged:"), forControlEvents: UIControlEvents.ValueChanged)
 
